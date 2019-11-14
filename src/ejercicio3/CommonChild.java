@@ -35,14 +35,11 @@ public class CommonChild
 	    
 	    catch (Exception e) 	    
 	    {
-	    	System.err.println( e.getMessage()) ; 	    	
-		}
-	    finally
-	    {
 	    	System.err.println("ERROR in string 1. ") ;
+	    	System.err.println( e.getMessage()) ; 	
 	    	System.exit(0);
 	    }
-	    
+	   
 	    try 
 	    {	    	
 	    	ArrayControl.charControl(y);	    	
@@ -51,14 +48,11 @@ public class CommonChild
 	    
 	    catch (Exception e) 	    
 	    {
-	    	System.err.println(e.getMessage()) ;  	    
-	    	
-		} 
-	    finally
-	    {
 	    	System.err.println("ERROR in string 2. ");
+	    	System.err.println(e.getMessage()) ;
 	    	System.exit(0);
-	    }
+	    	
+		} 	   
 	    
 	     System.out.println("The Longest Common Child is " +  lcc.lcc( x, y, m, n) +  " characters long.") ; 
 	   
