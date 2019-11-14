@@ -13,7 +13,7 @@ public class CommonChild
 		
 		String s1 = scan.nextLine();		
 		
-		System.out.println("Enter the lala String");
+		System.out.println("Enter the second String");
 		
 		String s2 = scan.nextLine();
 		scan.close();		
