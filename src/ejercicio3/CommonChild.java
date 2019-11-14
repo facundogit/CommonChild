@@ -1,21 +1,19 @@
 package ejercicio3;
 
 import java.util.Scanner;
-
 public class CommonChild 
 {	  
 	  public static void main(String[] args) 
 	  { 
-	    LongestCommonChild lcc = new LongestCommonChild(); 
-	    
-	      
+	    LongestCommonChild lcc = new LongestCommonChild();  
+	        
 	    Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Enter the first String");
 		
 		String s1 = scan.nextLine();		
 		
-		System.out.println("Enter the second String");
+		System.out.println("Enter the lala String");
 		
 		String s2 = scan.nextLine();
 		scan.close();		
@@ -26,12 +24,43 @@ public class CommonChild
 	    
 	    int m = x.length; 
 	    int n = y.length; 
-	  
 	    
-	   if (ArrayControl.charControl(x) && ArrayControl.charControl(y))
-		{		   
-		   System.out.println("The Longest Common Child is " +  lcc.lcc( x, y, m, n) +  " characters long.") ; 
-	   	}	       
+	    Boolean flag = true;
+	    
+	    try 
+	    {
+	    	ArrayControl.charControl(x);	    	
+	    	ArrayControl.lenghtControl(x);	    	
+		} 
+	    
+	    catch (Exception e) 	    
+	    {
+	    	System.err.println( e.getMessage()) ; 	    	
+		}
+	    finally
+	    {
+	    	System.err.println("ERROR in string 1. ") ;
+	    	System.exit(0);
+	    }
+	    
+	    try 
+	    {	    	
+	    	ArrayControl.charControl(y);	    	
+	    	ArrayControl.lenghtControl(y);
+		} 
+	    
+	    catch (Exception e) 	    
+	    {
+	    	System.err.println(e.getMessage()) ;  	    
+	    	
+		} 
+	    finally
+	    {
+	    	System.err.println("ERROR in string 2. ");
+	    	System.exit(0);
+	    }
+	    
+	     System.out.println("The Longest Common Child is " +  lcc.lcc( x, y, m, n) +  " characters long.") ; 
 	   
 	    
 	  } 
